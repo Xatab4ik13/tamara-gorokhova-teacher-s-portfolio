@@ -17,7 +17,7 @@ const ContactsSection = () => {
     {
       icon: Phone,
       label: "Телефон",
-      value: "+7 (XXX) XXX-XX-XX",
+      value: "+7 923 356 2827",
       subvalue: "Рабочее время: Пн-Пт, 8:00-17:00",
     },
   ];
