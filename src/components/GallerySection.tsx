@@ -10,18 +10,18 @@ const GallerySection = () => {
   const images = [
     {
       src: gallery1,
-      alt: "Праздничное мероприятие с балалайкой",
-      span: "col-span-1 row-span-2",
+      title: "Праздничное мероприятие",
+      description: "Выступление с балалайкой на празднике",
     },
     {
       src: gallery2,
-      alt: "Новогоднее представление - Снегурочка",
-      span: "col-span-1 row-span-1",
+      title: "Новогоднее представление",
+      description: "В роли Снегурочки на утреннике",
     },
     {
       src: gallery3,
-      alt: "Русские народные традиции",
-      span: "col-span-1 row-span-1",
+      title: "Русские народные традиции",
+      description: "Знакомство детей с культурой",
     },
   ];
 
@@ -53,29 +53,36 @@ const GallerySection = () => {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-[200px] md:auto-rows-[250px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {images.map((image, index) => (
               <div
                 key={index}
-                className={`${image.span} cursor-pointer group overflow-hidden rounded-2xl shadow-lg relative`}
+                className="cursor-pointer group"
                 onClick={() => setSelectedImage(image.src)}
               >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-primary-foreground font-script text-lg">{image.alt}</p>
+                <div className="bg-background/90 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden card-hover border border-border/50">
+                  {/* Title on top */}
+                  <div className="p-4 border-b border-border/30">
+                    <h4 className="font-display text-lg font-semibold text-foreground">
+                      {image.title}
+                    </h4>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      {image.description}
+                    </p>
+                  </div>
+                  
+                  {/* Image - fixed aspect ratio */}
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img
+                      src={image.src}
+                      alt={image.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
                 </div>
               </div>
             ))}
           </div>
-
-          <p className="text-center text-muted-foreground mt-12 font-script text-xl">
-            Дополнительные фотографии будут добавлены 📸
-          </p>
         </div>
       </div>
 
