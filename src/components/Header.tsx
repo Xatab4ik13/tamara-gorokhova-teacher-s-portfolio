@@ -51,7 +51,7 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2 text-foreground"
+          className="md:hidden p-2 text-primary bg-background/80 rounded-lg shadow-sm border border-border/50"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -60,13 +60,13 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-md border-b border-border">
-          <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-background shadow-lg border-b border-border">
+          <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2"
+                className="text-base font-medium text-foreground hover:text-primary hover:bg-secondary/50 transition-colors py-3 px-4 rounded-lg"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.label}
