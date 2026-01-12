@@ -8,6 +8,7 @@ import photo5 from "@/assets/gallery/photo-5.jpg";
 import photo6 from "@/assets/gallery/photo-6.jpg";
 import photo7 from "@/assets/gallery/photo-7.jpg";
 import photo8 from "@/assets/gallery/photo-8.jpg";
+import photo9 from "@/assets/gallery/photo-9.jpg";
 
 const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -44,6 +45,10 @@ const GallerySection = () => {
     {
       src: photo8,
       description: "12 декабря наша страна отмечает особенный праздник – День Конституции Российской Федерации",
+    },
+    {
+      src: photo9,
+      description: "В дошкольной группе нашей школы прошла замечательная выставка осенних поделок из природного материала «Осенний бум», организованная для наших маленьких творцов и их родителей.",
     },
   ];
 
