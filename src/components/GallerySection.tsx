@@ -1,27 +1,15 @@
 import { useState } from "react";
 import { X, Camera, Heart } from "lucide-react";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
+import photo1 from "@/assets/gallery/photo-1.jpg";
 
 const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const images = [
     {
-      src: gallery1,
-      title: "Праздничное мероприятие",
-      description: "Выступление с балалайкой на празднике",
-    },
-    {
-      src: gallery2,
-      title: "Новогоднее представление",
-      description: "В роли Снегурочки на утреннике",
-    },
-    {
-      src: gallery3,
-      title: "Русские народные традиции",
-      description: "Знакомство детей с культурой",
+      src: photo1,
+      title: "День Героев Отечества",
+      description: "В нашей дошкольной группе прошла тематическая беседа, посвящённая Дню Героев Отечества.",
     },
   ];
 
