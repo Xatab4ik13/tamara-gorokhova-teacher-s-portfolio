@@ -31,8 +31,9 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <a href="#" className="font-display text-xl font-semibold text-foreground">
-          Т.Н. Горохова
+        <a href="#" className="flex flex-col leading-tight">
+          <span className="font-script text-2xl md:text-3xl text-primary">Горохова</span>
+          <span className="font-display text-xs md:text-sm text-muted-foreground tracking-wider">Тамара Николаевна</span>
         </a>
 
         {/* Desktop Navigation */}

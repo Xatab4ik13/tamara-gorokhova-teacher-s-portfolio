@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X } from "lucide-react";
+import { X, Award, Star } from "lucide-react";
 import cert1 from "@/assets/certificate-1.jpg";
 import cert2 from "@/assets/certificate-2.jpg";
 import cert3 from "@/assets/certificate-3.jpg";
@@ -26,9 +26,28 @@ const AchievementsSection = () => {
   ];
 
   return (
-    <section id="achievements" className="py-24 bg-secondary/30">
-      <div className="container mx-auto px-4">
+    <section id="achievements" className="py-24 relative overflow-hidden">
+      {/* Warm gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-secondary/50 via-secondary/30 to-primary/5" />
+      
+      {/* Decorative elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary/10 rounded-full blur-3xl" />
+      
+      {/* Stars decoration */}
+      <div className="absolute top-20 left-1/4 text-accent/20">
+        <Star className="w-8 h-8 fill-current" />
+      </div>
+      <div className="absolute bottom-32 right-1/4 text-primary/20">
+        <Star className="w-6 h-6 fill-current" />
+      </div>
+      <div className="absolute top-1/2 right-10 text-accent/15">
+        <Star className="w-10 h-10 fill-current" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
+          <span className="font-script text-3xl text-primary mb-2 block">Гордость и успехи</span>
           <h2 className="section-title">Достижения и награды</h2>
           <p className="section-subtitle mx-auto">
             Сертификаты и дипломы, подтверждающие профессиональный рост и квалификацию
@@ -44,7 +63,7 @@ const AchievementsSection = () => {
                 className="group cursor-pointer"
                 onClick={() => setSelectedImage(cert.image)}
               >
-                <div className="relative overflow-hidden rounded-2xl bg-background shadow-sm card-hover">
+                <div className="relative overflow-hidden rounded-2xl bg-background/90 backdrop-blur-sm shadow-lg card-hover border border-border/50">
                   <div className="aspect-[3/4] overflow-hidden">
                     <img
                       src={cert.image}
@@ -52,7 +71,7 @@ const AchievementsSection = () => {
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                     <p className="text-primary-foreground font-display text-lg font-semibold">
                       {cert.title}
@@ -60,6 +79,10 @@ const AchievementsSection = () => {
                     <p className="text-primary-foreground/80 text-sm">
                       {cert.year}
                     </p>
+                  </div>
+                  {/* Award badge */}
+                  <div className="absolute top-3 right-3 w-10 h-10 bg-accent rounded-full flex items-center justify-center shadow-lg">
+                    <Award className="w-5 h-5 text-accent-foreground" />
                   </div>
                 </div>
                 <div className="mt-4 text-center">
@@ -72,8 +95,8 @@ const AchievementsSection = () => {
             ))}
           </div>
 
-          <p className="text-center text-muted-foreground mt-12 italic">
-            Дополнительные сертификаты и дипломы будут добавлены
+          <p className="text-center text-muted-foreground mt-12 font-script text-xl">
+            Дополнительные сертификаты и дипломы будут добавлены ✨
           </p>
         </div>
       </div>
@@ -81,7 +104,7 @@ const AchievementsSection = () => {
       {/* Lightbox */}
       {selectedImage && (
         <div
-          className="fixed inset-0 z-50 bg-foreground/90 flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 bg-foreground/90 backdrop-blur-sm flex items-center justify-center p-4"
           onClick={() => setSelectedImage(null)}
         >
           <button
@@ -93,7 +116,7 @@ const AchievementsSection = () => {
           <img
             src={selectedImage}
             alt="Certificate"
-            className="max-w-full max-h-[90vh] object-contain rounded-lg"
+            className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           />
         </div>

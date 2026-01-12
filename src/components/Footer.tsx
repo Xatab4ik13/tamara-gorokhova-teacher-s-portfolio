@@ -2,15 +2,16 @@ import { Heart } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="py-8 bg-secondary/50 border-t border-border">
+    <footer className="py-8 bg-gradient-to-r from-secondary/60 via-secondary/40 to-secondary/60 border-t border-border/50">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="font-display text-lg font-semibold text-foreground">
-            Т.Н. Горохова
-          </p>
+          <div className="flex flex-col items-center md:items-start">
+            <span className="font-script text-2xl text-primary">Горохова</span>
+            <span className="font-display text-sm text-muted-foreground">Тамара Николаевна</span>
+          </div>
           
           <p className="text-sm text-muted-foreground flex items-center gap-1">
-            Сделано с <Heart className="w-4 h-4 text-primary" /> для конкурса «Учитель года»
+            Сделано с <Heart className="w-4 h-4 text-primary fill-primary" /> для конкурса «Учитель года»
           </p>
           
           <p className="text-sm text-muted-foreground">
