@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { X, Camera, Heart } from "lucide-react";
 import photo1 from "@/assets/gallery/photo-1.jpg";
+import photo2 from "@/assets/gallery/photo-2.jpg";
+import photo3 from "@/assets/gallery/photo-3.jpg";
+import photo4 from "@/assets/gallery/photo-4.jpg";
+import photo5 from "@/assets/gallery/photo-5.jpg";
+import photo6 from "@/assets/gallery/photo-6.jpg";
+import photo7 from "@/assets/gallery/photo-7.jpg";
+import photo8 from "@/assets/gallery/photo-8.jpg";
 
 const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -8,8 +15,35 @@ const GallerySection = () => {
   const images = [
     {
       src: photo1,
-      title: "День Героев Отечества",
       description: "В нашей дошкольной группе прошла тематическая беседа, посвящённая Дню Героев Отечества.",
+    },
+    {
+      src: photo2,
+      description: "Волшебный праздник: «Новогоднее приключение Буратино и Мальвины»",
+    },
+    {
+      src: photo3,
+      description: "4 ноября в России отмечается государственный праздник — День народного единства.",
+    },
+    {
+      src: photo4,
+      description: "В рамках IV этапа «Декады дорожной безопасности» в нашем детском саду были организованы разнообразные мероприятия, направленные на повышение уровня дорожной безопасности среди детей.",
+    },
+    {
+      src: photo5,
+      description: "31 октября в нашем детском саду прошёл незабываемый осенний праздник «Здравствуй, осень золотая!»",
+    },
+    {
+      src: photo6,
+      description: "ПОКА ПАМЯТЬ ЖИВА…",
+    },
+    {
+      src: photo7,
+      description: "ВЫПУСКНОЙ В ДЕТСКОМ САДУ",
+    },
+    {
+      src: photo8,
+      description: "12 декабря наша страна отмечает особенный праздник – День Конституции Российской Федерации",
     },
   ];
 
@@ -49,12 +83,9 @@ const GallerySection = () => {
                 onClick={() => setSelectedImage(image.src)}
               >
                 <div className="bg-background/90 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden card-hover border border-border/50">
-                  {/* Title on top */}
+                  {/* Description on top */}
                   <div className="p-4 border-b border-border/30">
-                    <h4 className="font-display text-lg font-semibold text-foreground">
-                      {image.title}
-                    </h4>
-                    <p className="text-sm text-muted-foreground mt-1">
+                    <p className="text-sm text-muted-foreground">
                       {image.description}
                     </p>
                   </div>
@@ -63,7 +94,7 @@ const GallerySection = () => {
                   <div className="aspect-[4/3] overflow-hidden">
                     <img
                       src={image.src}
-                      alt={image.title}
+                      alt={image.description}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
