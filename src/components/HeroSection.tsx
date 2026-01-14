@@ -53,7 +53,7 @@ const HeroSection = () => {
               <span className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground">Тамара Николаевна</span>
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Воспитатель дошкольной группы МБОУ «БСШ 5». 
+              Воспитатель дошкольной группы МБОУ «Брянковская средняя школа 5». 
               Более 16 лет посвящаю себя воспитанию и развитию детей дошкольного возраста.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
