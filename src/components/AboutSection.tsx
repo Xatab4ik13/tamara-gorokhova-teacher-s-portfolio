@@ -81,8 +81,8 @@ const AboutSection = () => {
                     обучение и вернулась в родной посёлок.
                   </p>
                   <p className="text-lg">
-                    С тех пор я работаю воспитателем разновозрастной группы в <strong className="text-foreground font-medium">
-                    МБУ «Брянковская школа №5»</strong>. Каждый день я стараюсь 
+                    С тех пор я работаю воспитателем дошкольной группы в <strong className="text-foreground font-medium">
+                    МБОУ «БСШ 5»</strong>. Каждый день я стараюсь 
                     создавать для детей атмосферу творчества, тепла и заботы.
                   </p>
                   <p className="text-lg">
