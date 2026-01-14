@@ -11,7 +11,7 @@ const Footer = () => {
           </div>
           
           <p className="text-sm text-muted-foreground flex items-center gap-1">
-            Воспитатель <Heart className="w-4 h-4 text-primary fill-primary" /> МБУ «Брянковская школа №5»
+            Воспитатель <Heart className="w-4 h-4 text-primary fill-primary" /> МБОУ «БСШ 5»
           </p>
           
           <p className="text-sm text-muted-foreground">

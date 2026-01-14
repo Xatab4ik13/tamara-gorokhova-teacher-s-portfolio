@@ -5,14 +5,14 @@ const ContactsSection = () => {
     {
       icon: MapPin,
       label: "Место работы",
-      value: "МБУ «Брянковская школа №5»",
-      subvalue: "Северо-Енисейский район, п. Брянка",
+      value: "МБОУ «БСШ 5»",
+      subvalue: "Муниципальное Бюджетное общеобразовательное учреждение «Брянковская средняя школа 5»",
     },
     {
       icon: Mail,
-      label: "Email",
-      value: "gorohova.tamara@example.com",
-      subvalue: "Для связи по вопросам сотрудничества",
+      label: "Рабочая почта",
+      value: "BryankaDOY@mail.ru",
+      subvalue: "Личная: Tamara_kulya@mail.ru",
     },
     {
       icon: Phone,
