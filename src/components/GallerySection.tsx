@@ -27,6 +27,16 @@ import carousel6 from "@/assets/carousel/carousel-6.jpg";
 import carousel7 from "@/assets/carousel/carousel-7.jpg";
 import carousel8 from "@/assets/carousel/carousel-8.jpg";
 import carousel9 from "@/assets/carousel/carousel-9.jpg";
+import carousel11 from "@/assets/carousel/carousel-11.jpg";
+import carousel12 from "@/assets/carousel/carousel-12.jpg";
+import carousel13 from "@/assets/carousel/carousel-13.jpg";
+import carousel14 from "@/assets/carousel/carousel-14.jpg";
+import carousel15 from "@/assets/carousel/carousel-15.jpg";
+import carousel16 from "@/assets/carousel/carousel-16.jpg";
+import carousel17 from "@/assets/carousel/carousel-17.jpg";
+import carousel18 from "@/assets/carousel/carousel-18.jpg";
+import carousel19 from "@/assets/carousel/carousel-19.jpg";
+import carousel20 from "@/assets/carousel/carousel-20.jpg";
 import carousel10 from "@/assets/carousel/carousel-10.jpg";
 
 const GallerySection = () => {
@@ -81,7 +91,16 @@ const GallerySection = () => {
     carousel7,
     carousel8,
     carousel9,
-    carousel10,
+    carousel11,
+    carousel12,
+    carousel13,
+    carousel14,
+    carousel15,
+    carousel16,
+    carousel17,
+    carousel18,
+    carousel19,
+    carousel20,
   ];
 
   return (
