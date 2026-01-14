@@ -1,5 +1,12 @@
 import { useState } from "react";
 import { X, Camera, Heart } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import photo1 from "@/assets/gallery/photo-1.jpg";
 import photo2 from "@/assets/gallery/photo-2.jpg";
 import photo3 from "@/assets/gallery/photo-3.jpg";
@@ -9,6 +16,18 @@ import photo6 from "@/assets/gallery/photo-6.jpg";
 import photo7 from "@/assets/gallery/photo-7.jpg";
 import photo8 from "@/assets/gallery/photo-8.jpg";
 import photo9 from "@/assets/gallery/photo-9.jpg";
+
+// Carousel images
+import carousel1 from "@/assets/carousel/carousel-1.jpg";
+import carousel2 from "@/assets/carousel/carousel-2.jpg";
+import carousel3 from "@/assets/carousel/carousel-3.jpg";
+import carousel4 from "@/assets/carousel/carousel-4.jpg";
+import carousel5 from "@/assets/carousel/carousel-5.jpg";
+import carousel6 from "@/assets/carousel/carousel-6.jpg";
+import carousel7 from "@/assets/carousel/carousel-7.jpg";
+import carousel8 from "@/assets/carousel/carousel-8.jpg";
+import carousel9 from "@/assets/carousel/carousel-9.jpg";
+import carousel10 from "@/assets/carousel/carousel-10.jpg";
 
 const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -50,6 +69,19 @@ const GallerySection = () => {
       src: photo9,
       description: "В дошкольной группе нашей школы прошла замечательная выставка осенних поделок из природного материала «Осенний бум», организованная для наших маленьких творцов и их родителей.",
     },
+  ];
+
+  const carouselImages = [
+    carousel1,
+    carousel2,
+    carousel3,
+    carousel4,
+    carousel5,
+    carousel6,
+    carousel7,
+    carousel8,
+    carousel9,
+    carousel10,
   ];
 
   return (
@@ -107,6 +139,38 @@ const GallerySection = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Photo Carousel */}
+        <div className="mt-16 max-w-5xl mx-auto">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {carouselImages.map((image, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <div 
+                    className="cursor-pointer group"
+                    onClick={() => setSelectedImage(image)}
+                  >
+                    <div className="aspect-square overflow-hidden rounded-xl shadow-lg border border-border/50">
+                      <img
+                        src={image}
+                        alt={`Фото ${index + 1}`}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-0 -translate-x-1/2 bg-background/90 hover:bg-background border-border shadow-lg" />
+            <CarouselNext className="right-0 translate-x-1/2 bg-background/90 hover:bg-background border-border shadow-lg" />
+          </Carousel>
         </div>
       </div>
 
