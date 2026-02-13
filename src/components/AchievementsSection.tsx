@@ -10,11 +10,19 @@ import cert7 from "@/assets/certificate-7.jpg";
 import cert8 from "@/assets/certificate-8.jpg";
 import gtoBadge from "@/assets/gto-badge.jpg";
 import diplomaSnow from "@/assets/diploma-snow.jpg";
+import vospitatelGoda from "@/assets/vospitatel-goda.jpg";
 
 const AchievementsSection = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const specialAwards = [
+    {
+      image: vospitatelGoda,
+      title: "1 место — «Воспитатель года-2026»",
+      year: "2026",
+      icon: Trophy,
+      highlight: true,
+    },
     {
       image: gtoBadge,
       title: "Золотой знак ГТО XI ступени",
@@ -119,7 +127,7 @@ const AchievementsSection = () => {
               <Medal className="w-6 h-6 text-accent" />
               Особые достижения
             </h3>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-3 gap-8">
               {specialAwards.map((award, index) => (
                 <div
                   key={index}
