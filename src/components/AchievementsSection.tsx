@@ -18,7 +18,7 @@ const AchievementsSection = () => {
   const specialAwards = [
     {
       image: vospitatelGoda,
-      title: "1 место — «Воспитатель года-2026»",
+      title: "1 место — Муниципальный этап всероссийского конкурса «Воспитатель года-2026»",
       year: "2026",
       icon: Trophy,
       highlight: true,
